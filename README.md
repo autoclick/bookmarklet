@@ -4,8 +4,7 @@ This is a simple bookmarklet that captures any webpage and save as png image usi
 
 ![Drag and Drop to Bookmark bar](https://raw.githubusercontent.com/autoclick/bookmarklet/main/drop.jpg "Drag and Drop to Bookmark bar") 
 
-Under the hood it uses [Drag and Drop to Bookmark bar][1]
-[1]:javascript:!function()%7Bfunction e()%7Bthis&&this.parentNode&&this.parentNode.removeChild(this),html2canvas(document.body).then(function(e)%7Breturn new Promise(function(t)%7Be.toBlob(t)%7D)%7D).then(function(e)%7Bvar t=document.createElement("a");return t.href=URL.createObjectURL(e),t.download=document.title.replace(/%5B/%5C%7C%5C%5C%60~!@#%5C$%25%5C%5E&%5C*%5C+%5C-=_'"%5C,%5C.:;%5D+/g,"_")+"_"+(new Date).getTime()+".png",t.click(),new Promise(function(e)%7BsetTimeout(10,e,t)%7D)%7D).then(function(e)%7B0===e.href.indexOf("blob:")&&(URL.revokeObjectURL(e.href),e.href="###")%7D).catch(function(e)%7Bconsole.error(e),e.message&&alert("Failed to capture:%5Cn"+e.message)%7D)%7Dif(window.html2canvas)return e();var t=document.createElement("script");t.onload=e,t.src="https://html2canvas.hertzen.com/dist/html2canvas.min.js",document.querySelector("head").appendChild(t)%7D()
+Under the hood it uses [Dragable and Dropable][(https://autoclick.github.io/bookmarklet/1.html)]
  to capture the webpage to canvas,
 then we convert the content inside this canvas element to image file.
 
