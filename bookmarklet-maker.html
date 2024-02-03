@@ -3,11 +3,11 @@
         <summary>View/edit code</summary>
         <div class=" form-group">
     <label for="title" class="card-subtitle">Title:</label>
-    <input id="title" value="bookmark link">
+    <input id="title" value="bookmark link" onpaste="onchange()">
 </div>
 <div class="form-group">
     <label for="code">JS Code:</label>
-    <textarea class="form-input" id="code" rows="10" cols="50" type="text"></textarea>
+    <textarea class="form-input" id="code" rows="10" cols="50" type="text" onpaste="onchange()"></textarea>
 </div>
 </div>
 <div id="ok" class="card" style="display: none;">
