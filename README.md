@@ -2,7 +2,7 @@
 
 This is a simple bookmarklet that captures any webpage and save as png image using HTML5 technologies.
 
-![Drag and Drop to Bookmark bar](https://raw.githubusercontent.com/autoclick/bookmarklet/main/drop.jpg "Drag and Drop to Bookmark bar") 
+![Bookmarklet Maker](https://github.com/autoclick/bookmarklet/blob/main/bookmarklet-maker.html) 
 
 Under the hood it uses [Dragable and Dropable][(https://autoclick.github.io/bookmarklet/1.html)]
  to capture the webpage to canvas,
