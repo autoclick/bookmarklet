@@ -37,7 +37,7 @@
 <script>
     function onchange() {
         $('.js-title').text($('#title').val())
-        $('#bookmarklet').attr('href', `javascript:${encodeURIComponent($('#code').val())}`)
+        $('#bookmarklet').attr('href', `javascript:${encodeURIComponent($('#code').val().replace(/\/\/.*$/gm, ''))}`)
         var hidden = !$('#title').val() || !$('#code').val();
         if (hidden) {
             $('#ok').hidden();
