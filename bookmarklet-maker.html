@@ -36,8 +36,10 @@
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script>
     function onchange() {
-        $('.js-title').text($('#title').val())
-        $('#bookmarklet').attr('href', `javascript:${encodeURIComponent($('#code').val().replace(/\/\/.*$/gm, ''))}`)
+        $('.js-title').text($('#title').val());
+            var output = "javascript:" +  encodeURIComponent("(function(){" + $('#code').val().replace(/\/\/.*$/gm, '') +  "})();");
+       
+        $('#bookmarklet').attr('href', output);
         var hidden = !$('#title').val() || !$('#code').val();
         if (hidden) {
             $('#ok').hidden();
